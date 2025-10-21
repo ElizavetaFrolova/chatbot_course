@@ -4,8 +4,7 @@ import bot.database_client
 
 class DatabaseHandler(Handler):
     def can_handle(self, update: dict) -> bool:
-        message = update.get("message", {})
-        return "text" in message or "photo" in message
+        return True
 
     def handle(self, update: dict) -> bool:
         bot.database_client.persist_updates([update])
