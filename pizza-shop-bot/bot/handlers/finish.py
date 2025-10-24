@@ -60,7 +60,7 @@ class OrderApprovalHandler(Handler):
             # Send pizza selection message with inline keyboard
             bot.telegram_client.sendMessage(
                 chat_id=update["callback_query"]["message"]["chat"]["id"],
-                text="Please choose pizza type",
+                text="Выбери пиццу, которую хочешь заказать:",
                 reply_markup=json.dumps(
                     {
                             "inline_keyboard": [
